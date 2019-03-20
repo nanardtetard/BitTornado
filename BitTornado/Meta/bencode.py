@@ -194,8 +194,7 @@ class BencodedFile(object):
         with open(fname, 'rb') as handle:
             # Using memory maps allows Python to handle some standard errors
             mm = mmap.mmap(handle.fileno(), 0, access=mmap.ACCESS_READ)
-            return klass(bdecode(mm, sloppy=sloppy, stacklevel=2), *args,
-                         **kwargs)
+            return klass(bdecode(mm, sloppy=sloppy, stacklevel=2), *args, **kwargs)
 
 #pylint: disable=C0103
 bencode = BTEncoder()

@@ -17,8 +17,7 @@ print('{} {} - decode BitTorrent metainfo files'.format(NAME, VERSION))
 print()
 
 if len(sys.argv) == 1:
-    print('{} file1.torrent file2.torrent file3.torrent ...'.format(
-          sys.argv[0]))
+    print('{} file1.torrent file2.torrent file3.torrent ...'.format(sys.argv[0]))
     print()
     sys.exit(2)     # common exit code for syntax error
 
